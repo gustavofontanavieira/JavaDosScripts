@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilizando o DOM/LIVE SERVER</title>
+    <style>
+        body {background-color: rgba(88,8,8,8); text-align: center; color: white}
+
+    </style>
+</head>
+<body>
+    <h1>Iniciando os estudos de DOM/Live server</h1>
+    <p>Então vamobora nesse negocio de <strong>JavaScript</strong></p>
+    <p>Será que vai funcionar?</p>
+    <div id="msg">
+        <p>olá mundo</p>
+    </div>
+
+<script>
+    //CHAMANDO ATRAVÉS DE TAGS
+    var p1 = window.document.getElementsByTagName('p')[0]//esse número em [] mostra qual parágrafo que quero, 0 = primeiro p
+    document.write(p1.innerHTML)//copiou o parágrafo zero e editou, com innerText só copia o texto o HTML pega até mesmo formatações dentro do parágrafo
+    p1.style.color = "blue"; //muda a cor da fonte do parágrafo
+
+
+    var div = window.document.getElementById('msg'); //getElemntsByName tem o mesmo principio do id
+    document.write(div.innerText)
+
+    //seletor
+    var d = window.document.querySelector('div#msg'); //classe usa # id usa ponto final .
+    d.style.color = "blue"
+    
+
+</script>
+</body>
+</html>
