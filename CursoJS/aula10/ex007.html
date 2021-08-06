@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+    /*Dando cor ao background*/
+        body{background-color: rgb(173, 171, 171)} 
+
+    /*Dando cor pro h1 e centralizando*/
+        h1{Color: Blue;         
+           text-align: center}
+
+    /*alinhando a div geral*/
+        div.alinhamento{text-align: center}
+
+    /*Alinhamento do botão */
+        div.botao{margin-top: 7px;
+                  margin-bottom: 7px;}
+
+    /*Ajuste no tamanho e cor do botão SOMAR*/
+        input.botao{width: 100px;
+                    height: 25px;
+                    background-color: rgb(62, 62, 165)}
+        
+    </style>
+</head>
+<body>
+    <h1>Somando valores</h1>
+    <div class="alinhamento">
+
+        <!--Definição dos id, nome dos retângulos onde serão informados os números-->
+        <input type="number" name="txtn1" id="txtn1"> + 
+        <input type="number" name="txtn2" id="txtn2">
+                <br>
+
+        <!--div criada pra pode formatar melhor o botão-->
+        <div class="botao">
+        
+        <!--criação do botão SOMAR-->
+            <input type="button" class="botao  "value="Somar" onclick="somar()"">
+        </div>
+
+        <!--div onde será retornada o resultado da soma-->
+        <div id="res">
+            Resultado: 
+        </div>
+    </div>
+<script>
+    function somar()
+    {
+        var tn1 = window.document.getElementById('txtn1')
+        var tn2 = window.document.querySelector('input#txtn2')
+        var res = window.document.getElementById('res')
+        var n1 = Number(tn1.value)  //transformando os valores em tipo number
+        var n2 = Number(tn2.value)
+        var s = n1 + n2;            //somando os valores
+        res.innerHTML = `A soma de ${n1} e ${n2} é igual a: ${s} ` //restornando os valores
+    }
+    
+</script>
+</body>
+</html>
