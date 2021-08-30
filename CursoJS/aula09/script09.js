@@ -10,3 +10,4 @@ document.write(div.innerText)
 //seletor
 var d = window.document.querySelector('div#msg'); //classe usa # id usa ponto final .
 d.style.color = "blue"
+
